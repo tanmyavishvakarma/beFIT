@@ -1,0 +1,112 @@
+ <html>
+    <head>
+        <title>
+            be FIT
+        </title>
+        <link rel="stylesheet" href="style.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Montserrat|Poiret+One&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Oswald&display=swap" rel="stylesheet"> 
+        <script src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="back">
+                    <div class="tbar">
+                        <div class="tname1">
+                            be
+                        </div>
+                        <div class="tname2">
+                            FIT
+                        </div>
+                        <a href="javascript:void(0)" class="brgr">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#" class="home">Home</a></li>
+                                <li><a href="#" class="about">About</a></li>
+                                <li><a href="membership.html" class="member">Membership</a> </li>
+                                <li><a href="#" class="schedule">Schedule</a></li>
+                                <li><a href="login.html" classs="log">Log In</li>
+                                <li><a href="contact.html" class="contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div  class="sl_bar">
+                        <a class="slogan1">Are you <strong>Ready</strong> ?</a>
+                        <a class="slogan3">Join now</a>
+                    </div>
+                    <div class="slogan2">
+                        The <strong>GYM</strong> awaits
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".brgr").click(function(){
+            $(".nav").toggleClass("open")
+            $(".brgr span").css("color","black")
+        })
+        $(".home").css("color","white");
+        $(".home").on("click",function(){
+                $(".home").css("color","white");
+                $(".about").css("color","black");
+                $(".member").css("color","black");
+                $(".schedule").css("color","black");
+                $(".log").css("color","black");
+                $(".contact").css("color","black");
+        })
+  
+        $(".about").on("click",function(){
+                $(".about").css("color","white");
+                $(".home").css("color","black");
+                $(".member").css("color","black");
+                $(".schedule").css("color","black");
+                $(".log").css("color","black");
+                $(".contact").css("color","black");
+        })
+        $(".member").on("click",function(){
+                $(".member").css("color","white");
+                $(".about").css("color","black");
+                $(".home").css("color","black");
+                $(".schedule").css("color","black");
+                $(".log").css("color","black");
+                $(".contact").css("color","black");
+        })
+        $(".schedule").on("click",function(){
+                $(".schedule").css("color","white");
+                $(".about").css("color","black");
+                $(".member").css("color","black");
+                $(".home").css("color","black");
+                $(".log").css("color","black");
+                $(".contact").css("color","black");
+        })
+        $(".log").on("click",function(){
+                $(".log").css("color","white");
+                $(".about").css("color","black");
+                $(".member").css("color","black");
+                $(".schedule").css("color","black");
+                $(".home").css("color","black");
+                $(".contact").css("color","black");
+        })
+        $(".contact").on("click",function(){
+                $(".contact").css("color","white");
+                $(".about").css("color","black");
+                $(".member").css("color","black");
+                $(".schedule").css("color","black");
+                $(".log").css("color","black");
+                $(".home").css("color","black");
+        })
+  
+  
+
+        })
+    </script>
+</html>

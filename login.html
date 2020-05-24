@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+            Login Page
+        </title>
+        <link rel="stylesheet" href="logstyle.css">  
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Montserrat&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Montserrat|Poiret+One&display=swap" rel="stylesheet"> 
+        <script src="jquery-3.4.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Bangers" rel="stylesheet">
+    </head>
+        <body>
+            <div class="back">
+                <div class="cover">
+                    <div class="box" id="login">
+                        <img src="dp2.png" class="dp">
+                        <div class="top_name">
+                            <strong>Login</strong>
+                            
+                        </div>
+                        <div class="frm">
+                            <form>
+                                <br>
+                                <br> 
+                                <p><div class="user">Username</div></p>
+                                <input type="text" name="" placeholder="Enter Username" id="uf">
+                                <br>
+                                <br>
+                                <br>
+                                <p><div class="pass">Password</div></p>
+                                <input type="password" name="" placeholder="Enter Password" id="pf">
+                                <p></p>
+                                <br>
+                                <input onclick="bn()" type="submit" name="" value="Login">
+                                <p></p>
+                                <br>
+                                <br>
+                                <a href="#">Don't have an account, Register here</a>
+                            </form>  
+                        <div class="loggedin" id="wuser">
+                            Welcome user
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+            <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+            <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+
+            <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+            <script src="/__/firebase/7.8.0/firebase-analytics.js"></script>
+
+            <!-- Add Firebase products that you want to use -->
+            <script src="/__/firebase/7.8.0/firebase-auth.js"></script>
+            <script src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+            <script src="/__/firebase/init.js"></script>
+            <script>
+                var firebaseConfig = {
+                    apiKey: "api-key",
+                    authDomain: "project-id.firebaseapp.com",
+                    databaseURL: "https://project-id.firebaseio.com",
+                    projectId: "project-id",
+                    storageBucket: "project-id.appspot.com",
+                    messagingSenderId: "sender-id",
+                    appId: "app-id",
+                    measurementId: "G-measurement-id",
+                };     
+            </script>
+            <script type="text/javascript">
+                firebase.auth().onAuthStateChanged(function(user) {
+                    if (user) {
+                        // User is signed in.
+                        document.getElementById("wuser").style.display="block";
+                        document.getElementById("login").style.display="none";
+                    } else {
+                        // No user is signed in.
+                        document.getElementById("wuser").style.display="none";
+                        document.getElementById("login").style.display="block";
+                    }
+                    });
+
+                function bn(){
+                    var usrnm=document.getElementById("uf").value;
+                    var pass=document.getElementById("pf").value;
+                    
+                    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                        // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        // ...
+                        window.alert("Error");
+});
+                }
+                        
+
+            
+            
+            </script>
+        </body>
+</html>
